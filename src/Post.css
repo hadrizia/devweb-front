@@ -1,0 +1,12 @@
+.Post {
+    margin: 15px;
+}
+
+.Post-Content{
+    background-color: chartreuse;
+}
+
+.Comment{
+    text-align: right;
+    margin: 15px;
+}

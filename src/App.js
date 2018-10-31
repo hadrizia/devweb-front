@@ -1,26 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Code from './Code';
+import Header from './Header';
+import Timeline from './Timeline';
 import './App.css';
 
+// código para quando o npm start nao funcionar: CHOKIDAR_USEPOLLING=true npm start
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-          Edit <Code plus="*">src/App.js</Code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <Header/>
+      <Timeline/>
       </div>
     );
   }
