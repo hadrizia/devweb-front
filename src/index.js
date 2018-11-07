@@ -5,6 +5,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope, faBell } from '@fortawesome/free-solid-svg-icons';
+
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(faEnvelope, faBell, fab);
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
