@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Header from './Header';
-import Timeline from './Timeline';
+import logo from '../logo.svg';
+import Header from './Header/Header';
+import Timeline from './Timeline/Timeline';
 import './App.css';
 
 // código para quando o npm start nao funcionar: CHOKIDAR_USEPOLLING=true npm start

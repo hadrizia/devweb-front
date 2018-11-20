@@ -32,8 +32,8 @@ export default class Header extends React.Component {
   render() {
     return (
       <div className="Header">
-        <Navbar expand="md" dark>
-          <NavbarBrand href="/">NomeDoApp</NavbarBrand>
+        <Navbar expand="md" color="faded" dark>
+          <NavbarBrand href="/">Bugs-CC</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
