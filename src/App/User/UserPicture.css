@@ -1,0 +1,20 @@
+.UserPicture {
+    border-radius: 50%;
+}
+
+.UserPicture img {
+    width: 100%;
+    height: auto;
+}
+
+.UserPictureSmall {
+    width: 40px;
+    height: 40px;
+}
+
+.UserPictureMedium {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    margin-top: 10px;
+}

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Comment from '../Comment/Comment';
+import NewComment from '../Comment/NewComment';
 import './OptionsBar.css';
-import { Collapse, Row, Col, Container, CardBody, Card } from 'reactstrap';
+import { Collapse, Row, Col, CardBody, Card } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //reactstrap
@@ -20,15 +21,14 @@ class OptionsBar extends Component {
   render() {
     return (
       <div className="OptionsBar">
-      <Container>
       <Row>
           <Col xs="3" sm="1">
-          <button class="btn op-btn">
+          <button className="btn op-btn">
           <FontAwesomeIcon icon="hand-point-up" color = "#67a9cf" size="lg"/>
           </button>
           </Col>
           <Col xs="3" sm="1">
-          <button class="btn op-btn">
+          <button className="btn op-btn">
           <FontAwesomeIcon icon="hand-point-down" color = "#ef8a62" size="lg"/>
           </button>
           </Col>
@@ -38,15 +38,19 @@ class OptionsBar extends Component {
           </button>
           </Col>
         </Row>
-      </Container>
+        <div className="Collapsed">
      <Collapse isOpen={this.state.collapse}>
           <Card>
             <CardBody>
+              <NewComment/>
+              <Comment/>
+              <Comment/>
               <Comment/>
               <Comment/>
             </CardBody>
           </Card>
         </Collapse>
+        </div>
      </div>
     );
   }

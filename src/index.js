@@ -6,10 +6,10 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faEnvelope, faBell, faComment, faHandPointUp, faHandPointDown } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faBell, faComment, faHandPointUp, faHandPointDown, faUser } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faEnvelope, faBell, fab, faComment, faHandPointUp, faHandPointDown);
+library.add(faEnvelope, faBell, fab, faComment, faHandPointUp, faHandPointDown, faUser);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
