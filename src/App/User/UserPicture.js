@@ -9,7 +9,7 @@ class UserPicture extends Component {
   render() {
     return (
       <div className="UserPicture">
-      <img style={{borderRadius: 50 + '%'}} src="http://naonascipraseraoutra.com/static/media/hadri.0831062c.jpg"/>
+      <img style={{borderRadius: 50 + '%'}} src={this.props.photo}/>
       </div>
     );
   }

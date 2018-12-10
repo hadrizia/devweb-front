@@ -1,4 +1,9 @@
 .op-btn{
     background-color: transparent;
-    padding: 0px;
+    font-size: 12px;
+    color: darkgray;
+}
+
+.count{
+    margin-right: 8px;
 }

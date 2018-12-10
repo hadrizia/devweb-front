@@ -14,24 +14,30 @@ class Post extends Component {
   render() {
     return (
       <div className="Post">
-       <Row>
-         <Col xs="auto">
-           <div className="UserPictureMedium"><UserPicture/>
+      <Row>
+        <Col xs="auto">
+          <div className="UserPictureMedium">
+          <div className="UserPicture">
+           <UserPicture photo = { this.props.report.isAnonymous ? "https://feedback.seekingalpha.com/s/cache/85/82/8582a8f2f9bf432ed6ad7c68abb2f3be.png" :  this.props.report.user.photo }/> 
+          </div>
+          </div>
+         </Col>
+         <Col xs="10" style={{ marginLeft: -15 + "px", marginTop: 10 + "px" }}>
+           <div>
+             { this.props.report.isAnonymous ? 'Usuário anônimo' :  this.props.report.user.name}
            </div>
-          </Col>
-          <Col xs="10" style={{ marginLeft: -15 + "px", marginTop: 10 + "px" }}>
-            <div>
-              Hadrizia Santos
-            </div>
-          </Col>
-        </Row>
-      <hr/>
-      <div className="Post-Content">
-      <p>sing Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-     </div>
+           <div className="createdDate">
+             { this.props.report.createdDate}
+           </div>
+         </Col>
+       </Row>
      <hr/>
-     <OptionsBar></OptionsBar>
+     <div className="Post-Content">
+     <p>{ this.props.report.content}</p>
     </div>
+    <hr/>
+    <OptionsBar report={ this.props.report}></OptionsBar>
+   </div>
     );
   }
 }

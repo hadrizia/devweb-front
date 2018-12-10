@@ -24,12 +24,14 @@ class OptionsBar extends Component {
       <Row>
           <Col xs="3" sm="1">
           <button className="btn op-btn">
-          <FontAwesomeIcon icon="hand-point-up" color = "#67a9cf" size="lg"/>
+          <FontAwesomeIcon className="count" icon="hand-point-up" color = "#67a9cf" size="lg"/>
+          {this.props.report.numLikes}
           </button>
           </Col>
           <Col xs="3" sm="1">
           <button className="btn op-btn">
-          <FontAwesomeIcon icon="hand-point-down" color = "#ef8a62" size="lg"/>
+          <FontAwesomeIcon  className="count" icon="hand-point-down" color = "#ef8a62" size="lg"/>
+          {this.props.report.numDislikes}
           </button>
           </Col>
           <Col sm="3">

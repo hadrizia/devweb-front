@@ -3,6 +3,9 @@ import axios from 'axios';
 
 import Post from './Post/Post';
 import './Timeline.css';
+import OptionsBar from './Post/OptionsBar/OptionsBar';
+import UserPicture from '../User/UserPicture';
+import { Row, Col } from 'reactstrap';
 
 class Timeline extends Component {
 
@@ -11,18 +14,19 @@ class Timeline extends Component {
   }
   
   componentDidMount() {
-    axios.get(`http://localhost:8080/reports`)
+    axios.get(`http://localhost:8000/reports`)
       .then(res => {
         const reports = res.data.reports
         this.setState({reports});
       })
   }
+  
 
   render() {
     return (
       <div className="Timeline">
       { this.state.reports.map(report => 
-      <Post value={report} />)}
+      <Post report={report}/>)}
       </div>
     );
   }
