@@ -14,6 +14,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import API from '../../api';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -29,6 +30,17 @@ export default class Header extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
+  logout = () => {
+    API.get('/auth/logout')
+      .then(response => {
+        if (response.status === 200) {
+          localStorage.clear();
+          window.location.replace('/');
+        }
+      });
+  }
+
   render() {
     return (
       <div className="Header">
@@ -59,7 +71,7 @@ export default class Header extends React.Component {
                     Mensagens
                   </DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>
+                  <DropdownItem onClick={ this.logout }>
                     Sair
                   </DropdownItem>
                 </DropdownMenu>

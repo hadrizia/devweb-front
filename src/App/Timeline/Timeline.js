@@ -4,28 +4,54 @@ import axios from 'axios';
 import Post from './Post/Post';
 import './Timeline.css';
 import Report from './Report/Report';
+import API from '../../api';
 
 class Timeline extends Component {
-
-  state = {
-      reports: []
-  }
+  
+  constructor(props) {
+    super(props);	    
+    this.state = { reports: [], user: '' };
+  }	 
   
   componentDidMount() {
-    axios.get(`http://localhost:8000/reports`)
-      .then(res => {
-        const reports = res.data.reports
-        this.setState({reports});
-      })
+    if (this.props.userLogged._id !== undefined){
+      this.setState({user: this.props.userLogged});
+    } else {
+     const statusUser = localStorage.getItem('userLogged');
+     if (statusUser === null) {
+        this.setState({ user: '' });
+      } else {
+        const userObject = JSON.parse(statusUser);
+        const userJSON = {
+          _id: userObject._id,
+          name: userObject.name,
+          email: userObject.email,
+          username: userObject.username,
+          photoURL: userObject.photoUrl
+        }
+        this.setState({ user: userJSON });
+      }
+    }
+
+    API.get('/reports')
+      .then(response => {
+        if (response.status === 200) {
+          const reportsList = response.data.reports;
+          this.setState({reports: reportsList});
+        }
+      }).catch(error => {
+      console.log('Error: ');
+      console.log(error);
+    })    
   }
   
 
   render() {
     return (
       <div className="Timeline">
-      <Report />
+      <Report userLogged = { this.state.user }/>
       { this.state.reports.map(report => 
-      <Post report={report}/>)}
+      <Post userLogged = { this.state.user } report={report}/>)}
       </div>
     );
   }

@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import SignUpForm from './SignUpForm/SignUpForm';
 import SignInForm from './SignInForm/SignInForm';
 import { Button, Row, Col } from 'reactstrap';
-import {
-    BrowserRouter as Router,
-    Link,
-    Route,
-    Switch,
-  } from 'react-router-dom';
-
 
 import './Login.css';
 
@@ -17,26 +9,22 @@ class Login extends Component {
 
     constructor(props) {
         super(props);
-        this.toggle = this.toggle.bind(this);
         this.state = {
-            signUp: false
-          };
-    }
-      
-    toggle() {
-        this.setState({
-            signUp: !this.state.signUp
-        });
-    }
-  
-  componentDidMount() {
-    // axios.get(`http://localhost:8000/reports`)
-    //   .then(res => {
-    //     const reports = res.data.reports
-    //     this.setState({reports});
-    //   })
+            signUp: false,
+        };
+        this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({ signUp: !this.state.signUp });
   }
   
+
+  handleLogin = loggedUser => {
+    const { handleLogin } = this.props;
+    console.log(this.props);
+    handleLogin(loggedUser);
+  }
 
   render() {
     return (
@@ -45,7 +33,7 @@ class Login extends Component {
     
     <Col>
       <Row>
-      { (this.state.signUp) ? <SignUpForm/> : <SignInForm/>}
+      { (this.state.signUp) ? <SignUpForm onSignUp={ this.handleLogin } /> : <SignInForm onLogged={ this.handleLogin }/>}
       </Row>
       <Row>
           <Col>

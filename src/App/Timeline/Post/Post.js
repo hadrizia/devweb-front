@@ -9,6 +9,28 @@ import { Row, Col } from 'reactstrap';
 class Post extends Component {
   constructor(props) {
     super(props);
+    this.state= {user: ''}
+  }
+
+  componentDidMount() {
+    if (this.props.userLogged !== undefined){
+      this.setState({user: this.props.userLogged});
+    } else {
+     const statusUser = localStorage.getItem('userLogged');
+     if (statusUser === null) {
+        this.setState({ user: '' });
+      } else {
+        const userObject = JSON.parse(statusUser);
+        const userJSON = {
+          _id: userObject._id,
+          name: userObject.name,
+          email: userObject.email,
+          username: userObject.username,
+          photoURL: userObject.photoUrl
+        }
+        this.setState({ user: userJSON });
+      }
+    }
   }
 
   render() {

@@ -7,10 +7,13 @@
     margin-top: 15px;
 }
 
-
 .Report-Content{
     margin-left: 15px;
     margin-right: 15px;
 
     border-radius: 15%;
+}
+
+.ReportForm{
+    margin: 10px;
 }

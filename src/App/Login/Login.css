@@ -9,7 +9,7 @@
     left: 0;
     width: fit-content;
     height: fit-content;
-    max-width: 600px;
+    max-width: 650px;
 }
 
 .Login-Content{
@@ -23,6 +23,12 @@
 .Login-Content Input{
     border:none;
     border-color: transparent;
+    font-size: 13px;
+}
+
+.Login-Content Label{
+    font-size: 13px;
+    color:#495057;
 }
 
 #Login-button{
@@ -31,10 +37,13 @@
     background-color: #808ce6;
 }
 
-.Login a{
+.Login p{
     color: #929194;
-    font-size: 12px;
-    padding: 5px;
+    width: fit-content;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .btn-link{
