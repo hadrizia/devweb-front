@@ -3,9 +3,7 @@ import axios from 'axios';
 
 import Post from './Post/Post';
 import './Timeline.css';
-import OptionsBar from './Post/OptionsBar/OptionsBar';
-import UserPicture from '../User/UserPicture';
-import { Row, Col } from 'reactstrap';
+import Report from './Report/Report';
 
 class Timeline extends Component {
 
@@ -25,6 +23,7 @@ class Timeline extends Component {
   render() {
     return (
       <div className="Timeline">
+      <Report />
       { this.state.reports.map(report => 
       <Post report={report}/>)}
       </div>

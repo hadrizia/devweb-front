@@ -1,0 +1,11 @@
+.Signup{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#Signup-button{
+    margin-top: 12px;
+    width: -webkit-fill-available;
+    background-color: orange;
+}

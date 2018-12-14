@@ -1,0 +1,48 @@
+.Login{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: fit-content;
+    height: fit-content;
+    max-width: 600px;
+}
+
+.Login-Content{
+    border-style: solid;
+    border-width: 5px;;
+    border-color: #F1F0F2;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.Login-Content Input{
+    border:none;
+    border-color: transparent;
+}
+
+#Login-button{
+    margin-top: 12px;
+    width: -webkit-fill-available;
+    background-color: #808ce6;
+}
+
+.Login a{
+    color: #929194;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.btn-link{
+    width: -webkit-fill-available;
+    background-color: transparent;
+    margin-top: 8px;
+    border:none;
+    color: #929194;
+    border-color: transparent;
+    font-size: 12px;
+}
