@@ -1,6 +1,8 @@
 # Devweb-Front
 
-Projeto desenvolvido para a disciplina de Programação III durante o período 2018.2. Consiste em uma aplicação Web onde os estudantes/servidores do curso de Ciência da Computação da UFCG fazem reclamações e/ou sugerem melhorias para o curso em si. Também é possível apoiar ou rejeitar as postagens feitas.  
+Projeto desenvolvido para a disciplina de Programação III durante o período 2018.2. 
+
+Consiste em uma aplicação Web onde os estudantes/servidores do curso de Ciência da Computação da UFCG fazem reclamações e/ou sugerem melhorias para o curso em si. Também é possível apoiar ou rejeitar as postagens feitas.  
 
 ## Execução
 Para rodar o front-end, é necessário seguir os seguintes passos:
