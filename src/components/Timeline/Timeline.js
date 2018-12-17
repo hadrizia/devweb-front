@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 import Post from './Post/Post';
 import './Timeline.css';
@@ -47,7 +46,7 @@ class Timeline extends Component {
   };
 
   handlePosts = newPost => {
-    if(newPost != undefined) {
+    if(newPost !== undefined) {
       const reports = this.state.reports;
       reports.push(newPost);
      this.setState({ reports: reports });
@@ -71,7 +70,7 @@ class Timeline extends Component {
       <div className="Timeline">
       <Report userLogged = { this.state.user } handlePosts={ this.handlePosts }/>
       { this.state.reports.map(report => 
-      <Post userLogged = { this.state.user } report={report}/>)}
+      <Post userLogged = { this.state.user } report={report} key={ report._id }/>)}
       </div>
     );
   }

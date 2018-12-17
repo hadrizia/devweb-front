@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import Header from '../Header/Header';
 import Timeline from '../Timeline/Timeline';
 import './Dashboard.css';
-import API from "../../api";
 
 // código para quando o npm start nao funcionar: CHOKIDAR_USEPOLLING=true npm start
 class Dashboard extends Component {

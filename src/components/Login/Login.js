@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SignUpForm from './SignUpForm/SignUpForm';
 import SignInForm from './SignInForm/SignInForm';
-import { Button, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 import './Login.css';
 

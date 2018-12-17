@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App/App';
-import Dashboard from './App/Dashboard/Dashboard';
+import App from './App';
+import Dashboard from './components/Dashboard/Dashboard';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

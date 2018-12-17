@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Report.css';
 import API from '../../../api';
-import { Input, Row, Button } from 'reactstrap';
+import { Input, Button } from 'reactstrap';
 
 
 //reactstrap

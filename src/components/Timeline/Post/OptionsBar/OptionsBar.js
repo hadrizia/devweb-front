@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Comment from '../Comment/Comment';
 import NewComment from '../Comment/NewComment';
 import './OptionsBar.css';
 import { Collapse, Row, Col, CardBody, Card } from 'reactstrap';
@@ -38,7 +37,6 @@ class OptionsBar extends Component {
           token: userObject.token
         }
         this.setState({ user: userJSON });
-        console.log(this.state.user);
       }
     }
 
@@ -47,11 +45,9 @@ class OptionsBar extends Component {
     }
 
     const url = '/reports/' + this.props.report._id + '/comments';
-    console.log('USER' + this.state.user.token);
     API.get(url, {},{ headers: { 'Authorization': 'Bearer '+ this.state.user.token }
       }).then(response => {
           if (response.status === 200) {
-            console.log('comments' + response.data);
             this.setState({comments: response.data});
           } else {
             localStorage.clear();
@@ -127,8 +123,6 @@ class OptionsBar extends Component {
           <Card>
             <CardBody>
               <NewComment/>
-              {console.log('aaaaaaaaaaaaaaa'+this.state.comments.content) }
-
               {/* { this.state.comments.map(comment => 
                 <Comment comment= { comment }/>) 
               } */}

@@ -4,6 +4,10 @@ import UserPicture from '../../../User/UserPicture';
 import { Row, Col } from 'reactstrap';
 
 class Comment extends Component {
+  constructor(props) {
+    super(props);
+  } 
+
     render() {
         return (
           <div className="Comment">
@@ -16,13 +20,12 @@ class Comment extends Component {
               <Row>
                 <Col>
                 <div>
-                  Hadrizia Santos
+                  { this.props.user.name } 
                 </div>
                 </Col>
               </Row>
               <Row>
                 <Col xs="auto" style={{ maxWidth: 100 + '%'}}>
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                 </Col>
               </Row> 
               </Col>

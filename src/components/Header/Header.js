@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.css'; 
-import { Badge } from 'reactstrap';
 import {
   Collapse,
   Navbar,
@@ -13,7 +12,6 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import API from '../../api';
 
 export default class Header extends React.Component {

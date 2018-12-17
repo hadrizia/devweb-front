@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './SignUpForm.css';
-import { Button, Row, Col, Input, Label } from 'reactstrap';
+import { Button, Row, Col } from 'reactstrap';
 import API from '../../../api';
 
 class SignUp extends Component {

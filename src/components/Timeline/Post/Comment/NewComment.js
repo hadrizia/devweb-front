@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Collapse, Row, Col, Container, CardBody, Card, InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
+import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //reactstrap
