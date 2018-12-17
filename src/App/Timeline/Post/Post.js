@@ -59,7 +59,7 @@ class Post extends Component {
      <p>{ this.props.report.content}</p>
     </div>
     <hr/>
-    <OptionsBar report={ this.props.report}></OptionsBar>
+    <OptionsBar report={ this.props.report } user={ this.state.user }></OptionsBar>
    </div>
     );
   }

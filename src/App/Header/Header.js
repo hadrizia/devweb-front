@@ -50,27 +50,13 @@ export default class Header extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem active className="NavItem">
-                <NavLink href="/components/">Home</NavLink>
-              </NavItem>
-              <NavItem className="NavItem">
-                <NavLink href="/">Sobre</NavLink>
-              </NavItem>
-              <NavItem active className="NavItem" active>
-                <FontAwesomeIcon className="bell-icon" icon="bell" color = "#B4B3C2" />
-                <Badge color="primary" className="badge" pill>1</Badge>
+                <NavLink href="/">Home</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle className="NavItem" nav caret>
-                  Hadrizia
+                <DropdownToggle className="NavItemName" nav caret>
+                  { this.props.user.name }
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
-                    Perfil
-                  </DropdownItem>
-                  <DropdownItem>
-                    Mensagens
-                  </DropdownItem>
-                  <DropdownItem divider />
                   <DropdownItem onClick={ this.logout }>
                     Sair
                   </DropdownItem>

@@ -46,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Header/>
+      <Header user= { this.state.user }/>
       { this.state.userLogged === true ? <Dashboard userLogged={ this.state.user }/> :  <Login userLogged={ this.state.userLogged } handleLogin={ this.handleLogin }/> }
       </div>
     );
