@@ -26,7 +26,8 @@ class App extends Component {
         name: userObject.name,
         email: userObject.email,
         username: userObject.username,
-        photoURL: userObject.photoUrl
+        photoURL: userObject.photoUrl,
+        token: userObject.token
       }
       this.setState({ userLogged: true, user: userJSON });
     }

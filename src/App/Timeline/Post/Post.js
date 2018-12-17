@@ -13,7 +13,7 @@ class Post extends Component {
   }
 
   componentDidMount() {
-    if (this.props.userLogged !== undefined){
+    if (this.props.userLogged.name !== undefined){
       this.setState({user: this.props.userLogged});
     } else {
      const statusUser = localStorage.getItem('userLogged');
@@ -26,7 +26,8 @@ class Post extends Component {
           name: userObject.name,
           email: userObject.email,
           username: userObject.username,
-          photoURL: userObject.photoUrl
+          photoURL: userObject.photoUrl,
+          token: userObject.token
         }
         this.setState({ user: userJSON });
       }
@@ -49,7 +50,7 @@ class Post extends Component {
              { this.props.report.isAnonymous ? 'Usuário anônimo' :  this.props.report.user.name}
            </div>
            <div className="createdDate">
-             { this.props.report.createdDate}
+           {new Date(this.props.report.createdDate).toLocaleDateString()}
            </div>
          </Col>
        </Row>

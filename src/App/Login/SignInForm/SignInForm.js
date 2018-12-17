@@ -26,7 +26,16 @@ class SignInForm extends Component {
       .then(response => {
         if (response.status === 200) {
           const { onLogged } = this.props;
-          onLogged(response.data.user);
+          const u = response.data.user;
+          const user = {
+            _id: u._id,
+            name: u.name,
+            email: u.email,
+            username: u.username,
+            photoURL: u.photoUrl,
+            token: response.data.token
+          }
+          onLogged(user);
         }
       }).catch(error => {
       console.log('Error: ');

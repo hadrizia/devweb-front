@@ -22,7 +22,6 @@ class Login extends Component {
 
   handleLogin = loggedUser => {
     const { handleLogin } = this.props;
-    console.log(this.props);
     handleLogin(loggedUser);
   }
 

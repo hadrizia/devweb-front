@@ -56,13 +56,13 @@ class SignUp extends Component {
       <Row>
       <div className="Login-Content">
       <form>
-          <input type="text" placeholder="Nome"  value={ this.state.name } onChange={ this.handleInputChange }/> 
-          <input type="email" placeholder="Email" value={ this.state.email } onChange={ this.handleInputChange }/>
-          <input type="text" placeholder="Username" value={ this.state.username } onChange={ this.handleInputChange }/> 
-          <input type="password" placeholder="Password" value={ this.state.password } onChange={ this.handleInputChange }/>
-          <input type="text" placeholder="Profile URL" value={ this.state.photoURL } onChange={ this.handleInputChange }/>
+          <input type="text" placeholder="Nome"  name="name" value={ this.state.name } onChange={ this.handleInputChange }/> 
+          <input type="email" placeholder="Email" name="email" value={ this.state.email } onChange={ this.handleInputChange }/>
+          <input type="text" placeholder="Username" name="username" value={ this.state.username } onChange={ this.handleInputChange }/> 
+          <input type="password" placeholder="Password" name="password" value={ this.state.password } onChange={ this.handleInputChange }/>
+          <input type="text" placeholder="Profile URL" name="photoURL" value={ this.state.photoURL } onChange={ this.handleInputChange }/>
           <label>Birth</label>
-          <input type="date" placeholder="Data de Nascimento" value={ this.state.birth } onChange={ this.handleInputChange }/>
+          <input type="date" placeholder="Data de Nascimento" name="birth" value={ this.state.birth } onChange={ this.handleInputChange }/>
        </form>
       </div>
       </Row>

@@ -27,7 +27,8 @@ class Timeline extends Component {
           name: userObject.name,
           email: userObject.email,
           username: userObject.username,
-          photoURL: userObject.photoUrl
+          photoURL: userObject.photoUrl,
+          token: userObject.token
         }
         this.setState({ user: userJSON });
       }
@@ -43,13 +44,32 @@ class Timeline extends Component {
       console.log('Error: ');
       console.log(error);
     })    
-  }
+  };
+
+  handlePosts = newPost => {
+    if(newPost != undefined) {
+      const reports = this.state.reports;
+      reports.push(newPost);
+     this.setState({ reports: reports });
+    }else{
+      API.get('/reports')
+      .then(response => {
+        if (response.status === 200) {
+          const reportsList = response.data.reports;
+          this.setState({reports: reportsList});
+        }
+      }).catch(error => {
+      console.log('Error: ');
+      console.log(error);
+      });   
+    }
+ };	 
   
 
   render() {
     return (
       <div className="Timeline">
-      <Report userLogged = { this.state.user }/>
+      <Report userLogged = { this.state.user } handlePosts={ this.handlePosts }/>
       { this.state.reports.map(report => 
       <Post userLogged = { this.state.user } report={report}/>)}
       </div>
